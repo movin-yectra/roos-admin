@@ -1,6 +1,6 @@
-import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { RoosBaseServices } from "../../common/services";
-import { AllDropdownModel, DropdownDataModel } from "../models";
+import { AllDropdownModel } from "../models";
 
 interface IDropdown {
   dropDown: AllDropdownModel;

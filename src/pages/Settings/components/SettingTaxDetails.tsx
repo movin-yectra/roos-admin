@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 import { FieldArray, FormikProvider, useFormik } from "formik";
 
@@ -27,7 +28,7 @@ import { useAppAlert } from "../../../common/hooks/useAppAlert";
 import { SettingServices } from "../services";
 
 const SettingTaxDetails:React.FC = () => {
-  const [dropdownResponse, setDropdownResponse] = useState<ListItem[]>([]);
+  const [dropdownResponse, ] = useState<ListItem[]>([]);
 
   const dispatch = useAppDispatch();
   const selectors = useAppSelector((state) => state.restaurant.restaurant);

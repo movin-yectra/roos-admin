@@ -1,4 +1,4 @@
-import { PayloadAction, createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import {
   RestaurantDataModel,
   PaymentMethodModel,
@@ -57,15 +57,6 @@ const initialState: IRestaurant = {
     businessId: "",
   },
 };
-
-const _services = new HomeService();
-
-// export const fetchAllDropdown = createAsyncThunk("api/fetchData", async () => {
-//   const response = await _services
-//     .getByBusinessId()
-//     .then((response) => response);
-//   return response;
-// });
 
 export const RestaurantDetailsSlice = createSlice({
   name: "restaurantDetails",

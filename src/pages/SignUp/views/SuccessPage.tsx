@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { faCircleCheck, faDownload } from "../../../common/ui/Icons/Icons";
 import BaseIcon from "../../../common/components/ui/BaseIcon";
 import { loadStripe } from "@stripe/stripe-js";

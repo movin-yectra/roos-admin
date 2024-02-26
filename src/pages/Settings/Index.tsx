@@ -1,31 +1,15 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { NavLink, Outlet, useLocation } from "react-router-dom";
-
-//custom components
-import BaseButton from "../../common/components/controls/BaseButton";
-
-//services
-import { SettingServices } from "./services";
-
-import { useAppDispatch, useAppSelector } from "../../store";
-import { setSettingRestaurantResponse } from "../../store/features/restaurantDetailsSlice";
-import { useAppAlert } from "../../common/hooks/useAppAlert";
+import { useAppSelector } from "../../store";
 
 const SettingsList: React.FC = () => {
   const bgImage = "bgImage";
   const settingsIcon = "settingsIcon";
 
   const location = useLocation();
-  const { setIsLoading, setResponseMassage, setShowModel } = useAppAlert();
 
   const selectors = useAppSelector((store) => store.businessId);
   const restaurantSelectors = useAppSelector((store) => store.restaurant);
-
-  // const restaurantName = restaurantSelectors.restaurant.restaurantName
-  //   .toLowerCase()
-  //   .replace(/(?:^|\s)\S/g, (match) => match.toUpperCase());
-
-  const _services = new SettingServices();
 
   const settingActive =
     location.pathname === "/setting" && "text-white setting-nav-active";
@@ -41,39 +25,6 @@ const SettingsList: React.FC = () => {
       path: "restaurant-profile",
     },
   ];
-
-  const updateRestaurantDetails = () => {
-    setIsLoading(true);
-    _services
-      .updateRestaurantDetails(
-        selectors.businessId,
-        restaurantSelectors.restaurant
-      )
-      .then((response) => {
-        if (response) {
-          setResponseMassage({
-            message: "Successfully Update Restaurant details",
-            statusCode: 200,
-          });
-          setTimeout(() => {
-            setIsLoading(false);
-
-            setShowModel(true);
-          }, 3000);
-        }
-      })
-      .catch((errors) => {
-        setResponseMassage({
-          message: errors.message,
-          statusCode: 404,
-        });
-        setTimeout(() => {
-          setIsLoading(false);
-
-          setShowModel(true);
-        }, 3000);
-      });
-  };
 
   useEffect(() => {
     // getRestuarentData();

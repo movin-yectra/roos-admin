@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 import { FieldArray, FormikProvider, useFormik } from "formik";
 
@@ -29,7 +30,7 @@ import { SettingServices } from "../services";
 import { faPlus, faTrash } from "../../../common/ui/Icons/Icons";
 
 const SettingDeliveryZone: React.FC = () => {
-  const [dropdownResponse, setDropdownResponse] = useState<ListItem[]>([]);
+  const [dropdownResponse, ] = useState<ListItem[]>([]);
   const {
     dropdownHandleClick,
     toggleDropdown,

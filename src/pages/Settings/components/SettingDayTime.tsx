@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 import {
   FieldArray,
@@ -34,7 +35,7 @@ import { RestaurantOpenCloseValidation } from "../../RestaurantDetails/validatio
 import { SettingServices } from "../services";
 
 const SettingDayTime: React.FC = () => {
-  const [dropdownResponse, setDropdownResponse] = useState<ListItem[]>([]);
+  const [dropdownResponse, ] = useState<ListItem[]>([]);
   const [selectedService, setSelectedService] = useState<ServiceType[]>([]);
   const [selectedDay, setSelectedDay] = useState<any>();
 
