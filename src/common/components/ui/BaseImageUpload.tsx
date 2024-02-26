@@ -16,7 +16,7 @@ const BaseImageUpload: React.FC<IProps> = ({
   formik,
   imageValue,
 }) => {
-  const [selectedImage, setSelectedImage] = useState<any>(
+  const [, setSelectedImage] = useState<any>(
     imageValue ? imageValue : null
   );
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -29,7 +29,7 @@ const BaseImageUpload: React.FC<IProps> = ({
     reader.onload = () => {
       setSelectedImage(reader.result);
       let image: any = reader.result;
-      
+
       if (reader.result) {
         const base64 = image.replace(/^data:image\/[a-z]+;base64,/, "");
         _services

@@ -76,8 +76,9 @@ const AppHeader: React.FC = () => {
   return (
     <div className="row g-0 mt-3">
       <div className="col-md-9">
-        {(location.pathname == "/" ||
-          location.pathname == "/menu-managing/add-newItem/customize-menu") && (
+        {(location.pathname === "/" ||
+          location.pathname ===
+            "/menu-managing/add-newItem/customize-menu") && (
           <SearchBar
             searchMenu={function (data: string): void {
               throw new Error("Function not implemented.");
