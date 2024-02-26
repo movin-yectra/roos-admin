@@ -34,6 +34,7 @@ const CouponCanvas: React.FC<IProps> = ({ onGetSelectedItems }) => {
           setIsLoading(false);
         });
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectorBusinessId]);
 
   const handleSearchMenu = (menuValue: string) => {

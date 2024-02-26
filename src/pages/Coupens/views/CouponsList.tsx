@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 import BaseButton from "../../../common/components/controls/BaseButton";
 import BaseIcon from "../../../common/components/ui/BaseIcon";

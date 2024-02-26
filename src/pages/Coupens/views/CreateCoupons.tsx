@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 import ReactQuill from "react-quill";
 import BaseCheckBox from "../../../common/components/controls/BaseCheckBox";
