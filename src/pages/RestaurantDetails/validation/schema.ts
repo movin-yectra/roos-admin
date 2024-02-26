@@ -1,5 +1,4 @@
 import * as Yup from "yup";
-import { RestaurantOpenCloseTimeModel } from "../models";
 
 export const RestaurantDetailsValidation = Yup.object().shape({
   image: Yup.string().required("Required"),
@@ -39,9 +38,9 @@ export const AddressDetailsValidations = Yup.object().shape({
 const validUrl =
   /((https?):\/\/)?(www.)?[a-z0-9]+(\.[a-z]{2,}){1,3}(#?\/?[a-zA-Z0-9#]+)*\/?(\?[a-zA-Z0-9-_]+=[a-zA-Z0-9-%]+&?)?$/;
 
-const facebook =
-  /^(?:(?:http|https):\/\/)?(?:www.)?facebook.com\/(?:(?:\w)*#!\/)?(?:pages\/)?(?:[?\w\-]*\/)?(?:profile.php\?id=(?=\d.*))?([\w\-]*)??$/;
-const instagram = /(https?:\/\/(www\.)?)?instagram\.com(\/[a-z]?)/;
+  const facebook = /^(?:(?:http|https):\/\/)?(?:www\.)?facebook\.com\/(?:(?:\w)*#!\/)?(?:pages\/)?(?:[?\w-]*\/)?(?:profile\.php\?id=(?=\d.*))?([\w-]*)?$/;
+  const instagram = /^(https?:\/\/(www\.)?)?instagram\.com(\/[a-z]?)$/;
+  
 
 export const RestaurantUrlsValidations = Yup.object().shape({
   website: Yup.string()

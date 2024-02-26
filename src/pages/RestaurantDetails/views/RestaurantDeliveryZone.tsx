@@ -22,7 +22,7 @@ import { DeliveryZoneValidation } from "../validation/schema";
 
 //store
 import { useAppSelector } from "../../../store";
-import { adddeliveryMode } from "../../../store/features/restaurantDetailsSlice";
+// import { adddeliveryMode } from "../../../store/features/restaurantDetailsSlice";
 
 export class DeliveryTypesModel {
   preparingTime: string;
