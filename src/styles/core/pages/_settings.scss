@@ -1,0 +1,49 @@
+.bgImage {
+  position: relative;
+}
+
+.settingsIcon {
+  position: absolute;
+  left: 23%;
+  bottom: 45%;
+}
+
+.settingsLabel {
+  position: absolute;
+  left: 31%;
+  bottom: 47%;
+}
+
+.setting-active {
+  background-image: linear-gradient(
+    180deg,
+    #ffa831 0%,
+    #ff9821 100%
+  ) !important;
+  color: white !important;
+  .notification-icon {
+    color: white !important;
+  }
+}
+
+.setting-nav {
+  font-weight: 600 !important;
+}
+.setting-nav:hover {
+  color: black !important;
+}
+
+.setting-nav-active {
+  background-image: linear-gradient(
+    180deg,
+    #ffa831 0%,
+    #ff9821 100%
+  ) !important;
+}
+
+.settingBanner {
+  bottom: -40px;
+  left: 30px;
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,35 @@
+.theadStyle {
+  background-color: #34b53a;
+  color: white;
+  tr {
+    th {
+      font-weight: 600 !important;
+    }
+  }
+  tr :first-child {
+    border-top-left-radius: 5px !important;
+    border-bottom-left-radius: 5px !important;
+  }
+  tr :last-child {
+    border-top-right-radius: 5px !important;
+    border-bottom-right-radius: 5px !important;
+  }
+}
+
+.tbodyStyle {
+  &:hover {
+    background-color: #e2fbd7 !important;
+    cursor: pointer !important;
+  }
+}
+.tfootStyle {
+  //
+}
+
+.theadMargin {
+  padding-top: 5rem;
+}
+
+.tableBody-divider {
+  border-top: 2px solid $light-grey !important;
+}

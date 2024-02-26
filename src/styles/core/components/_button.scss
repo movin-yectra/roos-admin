@@ -1,0 +1,56 @@
+.btn-success {
+  background-color: rgba(52, 181, 58, 1) !important;
+  border: rgba(52, 181, 58, 1) !important;
+  border-radius: 3px !important;
+}
+.btn-success:hover {
+  background-color: rgb(40, 121, 44) !important;
+  border: rgb(40, 121, 44) !important;
+}
+
+.btn-warning {
+  background-color: #ffa114 !important;
+  color: $white-color !important;
+  border: #ffa114 !important;
+  border-radius: 3px !important;
+}
+
+.btn-warning:hover {
+  background-color: #bd7201 !important;
+  border: #bd7201 !important;
+  color: white !important;
+  border-radius: 3px !important;
+}
+
+.hover-pill {
+  &:hover {
+    border-radius: 50rem !important;
+  }
+}
+.btn-green {
+  background-color: $light-green !important;
+}
+
+.btn-green-badge {
+  background-color: $light-green2 !important;
+}
+
+.btn-orange-badge {
+  background-color: $light-orange !important;
+}
+
+.btn-grey-badge {
+  background-color: $light-grey !important;
+}
+
+ /* Styles for desktop screens */
+.btn-gap {
+  gap: 10px;
+}
+
+.btn-width {
+    width: 75% !important;
+  @media screen and (min-width: 1367px) {
+    width: 50% !important;
+  }
+}

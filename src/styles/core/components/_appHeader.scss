@@ -1,0 +1,27 @@
+.icon {
+    width: 25px;
+    height: 25px;
+  }
+  
+  .small-badge {
+    color: white;
+    font-size: 9px;
+    width: 15px;
+    height: 15px;
+  }
+  
+  .top-text-block {
+    display: block;
+    color: #333;
+    // position: relative;
+    font-size: 0.9em;
+  
+    .top-text-light {
+      font-size: 0.7em;
+    }
+  }
+  
+  .profile-dropdown {
+    left: -120px;
+  }
+  

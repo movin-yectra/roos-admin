@@ -1,0 +1,17 @@
+//To have text inbetween horizontal rule.
+
+.horizontal-rule {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.horizontal-rule hr {
+  flex-grow: 1;
+  height: 1px;
+  background-color: #000;
+  border: none;
+  margin: 0 10px;
+}
+
+

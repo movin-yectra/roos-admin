@@ -1,0 +1,41 @@
+input::-webkit-input-placeholder {
+  color: black !important; /*Change the placeholder color*/
+  opacity: 0.5 !important; /*Change the opacity between 0 and 1*/
+}
+
+.uploadInputBox {
+  width: 125px;
+  height: 125px;
+  padding: 1.3rem;
+  border: 2px dashed #ced4da !important;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+}
+
+.uploadInputBox-error {
+  width: 125px;
+  height: 125px;
+  padding: 1.3rem;
+  border: 2px dashed rgb(255, 113, 113) !important;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+}
+
+.uploadedImage {
+  width: 125px;
+  height: 125px;
+}
+
+.imageText {
+  margin: -15px -15px;
+}
+
+.setting-image-upolad {
+  height: 150px !important;
+  width: 100%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}

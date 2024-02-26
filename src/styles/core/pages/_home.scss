@@ -1,0 +1,41 @@
+.notification-icon {
+  color: $grey-color;
+  padding-left: 2rem;
+  padding-right: 5px;
+
+  /* Styles for desktop screens */
+  @media screen and (min-width: 1367px) {
+    padding-left: 5rem;
+  }
+}
+
+.default-image {
+  position: relative;
+  top: 65px;
+}
+
+.img {
+  position: absolute;
+  left: 40%;
+  top: -75px;
+}
+
+.amount {
+  background-color: $light-green;
+  padding: 10px;
+}
+
+.tap-to-see {
+  position: absolute;
+  top: 60%;
+  right: 30%;
+  line-height: 5px;
+}
+
+.order-details-bg {
+  background-image: url(../../../assets/preview-bill.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
