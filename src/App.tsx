@@ -1,23 +1,23 @@
+import React, { Suspense } from "react";
 
-function App() {
+import { useRoutes } from "react-router-dom";
+import routes from "./providers/routes";
+
+import BaseSpinner from "./common/components/ui/BaseSpinner";
+import AppAlert from "./common/components/feedback/AppAlert";
+import { useAppAlert } from "./common/hooks/useAppAlert";
+
+const App: React.FC = () => {
+  let route = useRoutes(routes);
+  const { isLoading } = useAppAlert();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Suspense fallback={<BaseSpinner />}>
+      {isLoading && <BaseSpinner />}
+      <AppAlert />
+      <div>{route}</div>
+    </Suspense>
   );
-}
+};
 
 export default App;
