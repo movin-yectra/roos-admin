@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
+
+body {
+  margin: 0;
+  font-family: "DM Sans", sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background-color: #f8f8f8 !important;
+}
+
+* {
+  font-family: "DM Sans", sans-serif !important;
+}
