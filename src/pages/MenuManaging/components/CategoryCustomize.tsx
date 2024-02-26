@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useEffect, useState } from "react";
 import BaseButton from "../../../common/components/controls/BaseButton";
 import BaseInput from "../../../common/components/controls/BaseInput";

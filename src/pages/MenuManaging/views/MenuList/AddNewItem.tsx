@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+/* eslint-disable react-hooks/exhaustive-deps */
+import { useEffect } from "react";
 import { useNavigate } from "react-router";
 import { useLocation, useParams } from "react-router-dom";
 import { useFormik } from "formik";
