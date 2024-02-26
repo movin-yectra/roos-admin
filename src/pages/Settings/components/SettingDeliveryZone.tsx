@@ -28,7 +28,7 @@ import { SettingServices } from "../services";
 //icons
 import { faPlus, faTrash } from "../../../common/ui/Icons/Icons";
 
-const SettingDeliveryDetails: React.FC = () => {
+const SettingDeliveryZone: React.FC = () => {
   const [dropdownResponse, setDropdownResponse] = useState<ListItem[]>([]);
   const {
     dropdownHandleClick,
@@ -340,4 +340,4 @@ const SettingDeliveryDetails: React.FC = () => {
   );
 };
 
-export default SettingDeliveryDetails;
+export default SettingDeliveryZone;
