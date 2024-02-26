@@ -39,6 +39,10 @@ export const AddressDetailsValidations = Yup.object().shape({
 const validUrl =
   /((https?):\/\/)?(www.)?[a-z0-9]+(\.[a-z]{2,}){1,3}(#?\/?[a-zA-Z0-9#]+)*\/?(\?[a-zA-Z0-9-_]+=[a-zA-Z0-9-%]+&?)?$/;
 
+const facebook =
+  /^(?:(?:http|https):\/\/)?(?:www.)?facebook.com\/(?:(?:\w)*#!\/)?(?:pages\/)?(?:[?\w\-]*\/)?(?:profile.php\?id=(?=\d.*))?([\w\-]*)??$/;
+const instagram = /(https?:\/\/(www\.)?)?instagram\.com(\/[a-z]?)/;
+
 export const RestaurantUrlsValidations = Yup.object().shape({
   website: Yup.string()
     .matches(validUrl, "Enter correct url!")
@@ -47,16 +51,10 @@ export const RestaurantUrlsValidations = Yup.object().shape({
     .matches(validUrl, "Enter correct url!")
     .required("Business link is required"),
   facebook: Yup.string()
-    .matches(
-      /^(?:(?:http|https):\/\/)?(?:www.)?facebook.com\/(?:(?:\w)*#!\/)?(?:pages\/)?(?:[?\w\-]*\/)?(?:profile.php\?id=(?=\d.*))?([\w\-]*)??$/,
-      "Enter correct url!"
-    )
+    .matches(facebook, "Enter correct url!")
     .required("Facebook link is required"),
   instagram: Yup.string()
-    .matches(
-      /(https?:\/\/(www\.)?)?instagram\.com(\/[a-z]?)/,
-      "Enter correct url!"
-    )
+    .matches(instagram, "Enter correct url!")
     .required("Instagram link is required"),
 });
 
@@ -72,144 +70,6 @@ export const RestaurantTime = Yup.object().shape({
         .matches(/^(0[0-9]|1[0-9]|2[0-3])$/, "Invalid time format (HH:mm)"),
     })
   ),
-});
-
-export const RestaurantOpenCloseTimeSchama: Yup.ObjectSchema<
-  RestaurantOpenCloseTimeModel | any
-> = Yup.object().shape({
-  MONDAY: Yup.object({
-    closed: Yup.boolean(),
-    openAt: Yup.string()
-      .transform((originalValue, originalObject) => {
-        if (!originalObject.closed) {
-          return originalValue;
-        }
-        return originalValue;
-      })
-      .default(""),
-    closeAt: Yup.string()
-      .transform((originalValue, originalObject) => {
-        if (!originalObject.closed) {
-          return originalValue;
-        }
-        return originalValue;
-      })
-      .default(""),
-  }),
-  TUESDAY: Yup.object().shape({
-    closed: Yup.boolean(),
-    openAt: Yup.string()
-      .transform((originalValue, originalObject) => {
-        if (!originalObject.closed) {
-          return originalValue;
-        }
-        return originalValue;
-      })
-      .default(""),
-    closeAt: Yup.string()
-      .transform((originalValue, originalObject) => {
-        if (!originalObject.closed) {
-          return originalValue;
-        }
-        return originalValue;
-      })
-      .default(""),
-  }),
-  WEDNESDAY: Yup.object().shape({
-    closed: Yup.boolean(),
-    openAt: Yup.string()
-      .transform((originalValue, originalObject) => {
-        if (!originalObject.closed) {
-          return originalValue;
-        }
-        return originalValue;
-      })
-      .default(""),
-    closeAt: Yup.string()
-      .transform((originalValue, originalObject) => {
-        if (!originalObject.closed) {
-          return originalValue;
-        }
-        return originalValue;
-      })
-      .default(""),
-  }),
-  THURSDAY: Yup.object().shape({
-    closed: Yup.boolean(),
-    openAt: Yup.string()
-      .transform((originalValue, originalObject) => {
-        if (!originalObject.closed) {
-          return originalValue;
-        }
-        return originalValue;
-      })
-      .default(""),
-    closeAt: Yup.string()
-      .transform((originalValue, originalObject) => {
-        if (!originalObject.closed) {
-          return originalValue;
-        }
-        return originalValue;
-      })
-      .default(""),
-  }),
-  FRIDAY: Yup.object().shape({
-    closed: Yup.boolean(),
-    openAt: Yup.string()
-      .transform((originalValue, originalObject) => {
-        if (!originalObject.closed) {
-          return originalValue;
-        }
-        return originalValue;
-      })
-      .default(""),
-    closeAt: Yup.string()
-      .transform((originalValue, originalObject) => {
-        if (!originalObject.closed) {
-          return originalValue;
-        }
-        return originalValue;
-      })
-      .default(""),
-  }),
-  SATURDAY: Yup.object().shape({
-    closed: Yup.boolean(),
-    openAt: Yup.string()
-      .transform((originalValue, originalObject) => {
-        if (!originalObject.closed) {
-          return originalValue;
-        }
-        return originalValue;
-      })
-      .default(""),
-    closeAt: Yup.string()
-      .transform((originalValue, originalObject) => {
-        if (!originalObject.closed) {
-          return originalValue;
-        }
-        return originalValue;
-      })
-      .default(""),
-  }),
-  SUNDAY: Yup.object().shape({
-    closed: Yup.boolean(),
-    openAt: Yup.string()
-      .transform((originalValue, originalObject) => {
-        if (!originalObject.closed) {
-          return originalValue;
-        }
-        return originalValue;
-      })
-      .default(""),
-    closeAt: Yup.string()
-      .transform((originalValue, originalObject) => {
-        if (!originalObject.closed) {
-          return originalValue;
-        }
-        return originalValue;
-      })
-      .default(""),
-  }),
 });
 
 export const RestaurantOpenCloseValidation = Yup.object().shape({
@@ -241,7 +101,6 @@ export const TaxDetailsValidation = Yup.object({
     Yup.object({
       taxName: Yup.string().required("Tax Name is required"),
       taxValue: Yup.string().required("Tax Amount is required"),
-      // taxUnits: Yup.string().required("Tax Units are required"),
     })
   ),
 });

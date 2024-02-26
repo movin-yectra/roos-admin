@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 
@@ -81,7 +82,7 @@ const MenuList: React.FC = () => {
     setIsLoading(true);
     setBtnName(btnValue);
 
-    if (btnValue != undefined) {
+    if (btnValue !== undefined) {
       value = btnValue;
     }
     service

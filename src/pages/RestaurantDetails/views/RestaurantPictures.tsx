@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
@@ -15,7 +16,7 @@ import { useAppDispatch, useAppSelector } from "../../../store";
 import { addRestaurantImage } from "../../../store/features/restaurantDetailsSlice";
 
 //validations
-import { imagesSchama } from "../../Settings/validation/schema";
+// import { imagesSchama } from "../../Settings/validation/schema";
 
 const RestaurantPictures: React.FC = () => {
   const selectors = useAppSelector((state) => state.restaurant.restaurant);

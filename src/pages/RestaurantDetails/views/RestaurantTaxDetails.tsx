@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FieldArray, FormikProvider, useFormik } from "formik";
@@ -8,7 +9,7 @@ import BaseInput from "../../../common/components/controls/BaseInput";
 import BaseButton from "../../../common/components/controls/BaseButton";
 
 //icons
-import { faCaretDown, faPlus, faTrash } from "../../../common/ui/Icons/Icons";
+import {  faPlus, faTrash } from "../../../common/ui/Icons/Icons";
 
 //models
 import { TaxDetailsModel } from "../models";
@@ -18,7 +19,6 @@ import { TaxDetailsValidation } from "../validation/schema";
 
 //custom hooks
 import {
-  useDropdown,
   useInputControls,
 } from "../../../common/hooks/useControls";
 
@@ -28,15 +28,12 @@ import { addTaxDetails } from "../../../store/features/restaurantDetailsSlice";
 import { ListItem } from "../../../common/models";
 
 const RestaurantTaxDetails: React.FC = () => {
-  const [dropdownResponse, setDropdownResponse] = useState<ListItem[]>([]);
+  const [dropdownResponse] = useState<ListItem[]>([]);
 
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
   const selectors = useAppSelector((state) => state.restaurant.restaurant);
   const selectorsData = useAppSelector((state) => state.restaurant);
-
-  const { dropdownHandleClick, toggleDropdown, setSelectedDropdownValue } =
-    useDropdown();
 
   const initialValues: TaxDetailsModel = {
     taxDetails: [
